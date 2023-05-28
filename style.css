@@ -17,38 +17,38 @@ body{
     width: 300px;
     height: 300px;
     background-color: black;
+    border-radius: 10px;
 }
 .circle{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
-    box-shadow: 0 0 50px 30px red;
+    background-color: transparent;
+    box-shadow: 0 0 80px 80px red;
     z-index: -1;
-    border-radius: 50%;
     animation-name: aylana;
-    animation-duration: 2s;
-    animation-delay: 2s;
+    animation-duration: 15s;
+    transition: .5s;
     animation-iteration-count: infinite;
 }
 
 @keyframes aylana{
     0%{
-        transform: translate(0px);
+        transform: translateX(30px) translateY(20px);
     }
-    20%{
-        transform: translateX(0px) translateY(140px);
+    25%{
+        box-shadow: 0 0 100px 100px green;
+        transform: translateX(250px) translateY(20px) rotate(1turn);
     }
-    40%{
-        transform: translateX(-300px) translateY(140px);
+    50%{
+        transform: translateX(250px) translateY(260px) rotate(0.5turn);
+        box-shadow: 0 0 90px 90px blue;
     }
-    60%{
-        transform: translateX(-300px) translateY(-140px);
-    }
-    80%{
-        transform: translateX(0px) translateY(-140px);
+    75%{
+        transform: translateX(30px) translateY(260px) rotate(1turn);
+        box-shadow: 0 0 110px 110px yellow;
     }
     100%{
-        transform: translate(0px);
+        transform: translateX(30px) translateY(20px);
     }
 }
