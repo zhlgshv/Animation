@@ -7,6 +7,7 @@
 
 
 body{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,12 +19,16 @@ body{
     background-color: black;
 }
 .circle{
+    position: absolute;
     width: 20px;
     height: 20px;
     background-color: red;
-    /* border-radius: 50%; */
+    box-shadow: 0 0 50px 30px red;
+    z-index: -1;
+    border-radius: 50%;
     animation-name: aylana;
-    animation-duration: 5s;
+    animation-duration: 2s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
 }
 
@@ -31,25 +36,19 @@ body{
     0%{
         transform: translate(0px);
     }
-    10%{
-        transform: translateY(160px);
-    }
     20%{
-        transform: translateY(160px) rotate(90deg);
-    }
-    30%{
-        transform: translateY(160px);
+        transform: translateX(0px) translateY(140px);
     }
     40%{
-        transform: translateX(-320px) translateY(160px);
+        transform: translateX(-300px) translateY(140px);
     }
     60%{
-        transform: translateX(-320px) translateY(-160px);
+        transform: translateX(-300px) translateY(-140px);
     }
     80%{
-        transform: translateX(0) translateY(-160px);
+        transform: translateX(0px) translateY(-140px);
     }
     100%{
-        transform: translate(0);
+        transform: translate(0px);
     }
 }
